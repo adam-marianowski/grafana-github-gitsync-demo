@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Running pre-commit hook to clear GitHub access token. This script will update file and stage the changes."
+file_name="./provisioning/plugins/grafana-github-datasource.yml"
+new_token="<your_access_token>"
+sed -i "s/accessToken: .*/accessToken: $new_token/" $file_name
+
+git add $file_name
+
+echo "GitHub access token cleared in $file_name"

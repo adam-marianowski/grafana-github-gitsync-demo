@@ -1,0 +1,35 @@
+{
+  "timezone": "browser",
+  "editable": true,
+  "graphTooltip": 0,
+  "fiscalYearStartMonth": 0,
+  "schemaVersion": 41,
+  "templating": {},
+  "annotations": {},
+  "title": "Grafana repo monitoring",
+  "panels": [
+    {
+      "type": "timeseries",
+      "transparent": false,
+      "repeatDirection": "h",
+      "title": "grafana repo issues",
+      "datasource": {
+        "type": "grafana-github-datasource",
+        "uid": "github"
+      },
+      "targets": [
+        {
+          "owner": "grafana",
+          "repository": "grafana",
+          "queryType": "Issues"
+        }
+      ],
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+apiVersion: 1
+
+datasources:
+  - name: GitHub
+    type: grafana-github-datasource
+    uid: github
+    jsonData:
+      selectedAuthType: personal-access-token
+    secureJsonData:
+      accessToken: <your_github_token>
